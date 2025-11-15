@@ -344,6 +344,11 @@
   parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: ReagentGrinderMachineCircuitboard
   result: ReagentGrinderMachineCircuitboard
+  
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
+  id: TelevisionCircuitboard
+  result: TelevisionCircuitboard
 
 - type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]

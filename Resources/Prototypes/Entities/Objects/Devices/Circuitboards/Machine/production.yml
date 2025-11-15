@@ -1352,6 +1352,18 @@
 
 - type: entity
   parent: BaseMachineCircuitboard
+  id: TelevisionCircuitboard
+  name: television machine board
+  components:
+    - type: MachineBoard
+      prototype: ComputerTelevision
+      stackRequirements:
+        Steel: 2
+        Glass: 2
+        Cable: 3
+
+- type: entity
+  parent: BaseMachineCircuitboard
   id: SmartFridgeCircuitboard
   name: SmartFridge machine board
   description: A machine printed circuit board for a SmartFridge.
