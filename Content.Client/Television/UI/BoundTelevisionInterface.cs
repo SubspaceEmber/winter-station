@@ -5,7 +5,7 @@ namespace Content.Client.Television.UI;
 
 public sealed class TelevisionBoundInterface : BoundUserInterface
 {
-    private TelevisionInterface? _interface;
+    private TelevisionWindow? _interface;
     
     public TelevisionBoundInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) 
     {
@@ -16,7 +16,7 @@ public sealed class TelevisionBoundInterface : BoundUserInterface
     {
         base.Open();
 
-        _interface = new TelevisionInterface();
+        _interface = new TelevisionWindow();
         _interface.OpenCentered();
     }
     

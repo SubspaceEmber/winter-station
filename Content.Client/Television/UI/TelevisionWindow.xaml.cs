@@ -5,9 +5,9 @@ using Robust.Client.UserInterface.XAML;
 namespace Content.Client.Television.UI;
 
 [GenerateTypedNameReferences]
-public sealed partial class TelevisionInterface : FancyWindow
+public sealed partial class TelevisionWindow : FancyWindow
 {
-    public TelevisionInterface()
+    public TelevisionWindow()
     {
         RobustXamlLoader.Load(this);
 

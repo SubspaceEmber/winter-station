@@ -1,0 +1,14 @@
+﻿<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                      xmlns:access="clr-namespace:Content.Client.Access.UI"
+                      Title="{Loc 'analysis-console-menu-title'}"
+                      SetWidth="550"
+                      Resizable="False"
+                      MouseFilter="Stop">
+                      
+    <BoxContainer Orientation="Vertical" Margin="10">
+        <BoxContainer Orientation="Horizontal" Margin="5" Align="Center">
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

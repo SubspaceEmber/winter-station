@@ -232,3 +232,13 @@
   wires:
   - !type:AccessWireAction
   - !type:AiInteractWireAction
+
+- type: wireLayout
+  id: Television
+  dummyWires: 2
+  wires:
+    - !type:AiInteractWireAction
+    - !type:SpeechWireAction
+    - !type:PowerWireAction
+    - !type:TelevisionRestrictedWireAction
+    - !type:TelevisionEatTapeWireAction

@@ -12,6 +12,20 @@
     },
     {
       "name": "panel"
+    },
+    {
+      "name": "powered"
+    },
+    {
+      "name": "on"
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
     }
   ]
 }

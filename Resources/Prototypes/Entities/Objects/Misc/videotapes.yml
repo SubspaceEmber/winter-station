@@ -1,0 +1,41 @@
+- type: entity
+  name: videotape
+  parent: BaseItem
+  id: videotape
+  description: A cassette containing magnetic tape for watching shows and movies when inserted into a TV.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/videotapes.rsi
+      state: tape
+
+- type: entity 
+  parent: videotape
+  id: videotapeRandomColorBody
+  suffix: Colorful
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/videotapes.rsi
+      layers:
+        - state: tape_body_base
+          map: ["enum.DamageStateVisualLayers.Base"]
+        - state: tape_label
+    - type: RandomSprite
+      available:
+        - enum.DamageStateVisualLayers.Base:
+            tape_body_base: Sixteen
+
+- type: entity
+  parent: videotape
+  id: videotapeRandomColorLabel
+  suffix: Colorful
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/videotapes.rsi
+      layers:
+        - state: tape_color_label
+          map: ["enum.DamageStateVisualLayers.Base"]
+        - state: tape_color_base
+    - type: RandomSprite
+      available:
+        - enum.DamageStateVisualLayers.Base:
+            tape_color_label: Sixteen

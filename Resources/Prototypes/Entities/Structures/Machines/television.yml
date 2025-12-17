@@ -2,17 +2,23 @@
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: television set
   id: ComputerTelevision
-  description: It's TV time!
+  description: It's TV time! It looks like it can accept videotapes.
   components:
+  - type: Appearance 
+  - type: WiresVisuals
+  - type: WiresPanel
   - type: Sprite
     noRot: true
     sprite: Structures/Machines/television.rsi
-    drawdepth: SmallObjects
+    #drawdepth: SmallObjects
     offset: 0,0.1
     layers:          
     - state: icon
     - state: panel
       map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+    - state: powered
+      shader: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
   - type: PlaceableSurface
     placeCentered: true
     positionOffset: 0, 0.2 # todo need to figure out how to push it back for tables
@@ -22,6 +28,7 @@
     color: "#b89f25" # todo make this dependent on what's on screen
   - type: Machine
     board: TelevisionCircuitboard
+  - type: ActivatableUIRequiresPower
   - type: UserInterface
     interfaces:
       enum.TelevisionUiKey.Key:
@@ -39,3 +46,51 @@
           - TabletopMachineMask
         layer:
           - TabletopMachineLayer
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+          - !type:PlaySoundBehavior
+            sound:
+              collection: GlassBreak
+          - !type:ChangeConstructionNodeBehavior
+            node: machineFrame
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+  - type: ApcPowerReceiver
+    powerLoad: 150
+  - type: Item
+    sprite: Structures/Machines/television.rsi
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: MeleeWeapon
+    attackRate: 0.5
+    soundHit:
+      collection: GlassBreak
+    damage:
+      types:
+        Blunt: 25
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 10
+  - type: DamageOnHit
+    damage:
+      types:
+        Blunt: 10
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 50
+  - type: EmitSoundOnLand
+    sound:
+      collection: MetalBreak
+      params:
+        variation: 0.25
+  - type: HeldSpeedModifier
+    walkModifier: 0.5
+    sprintModifier: 0.3
+  - type: DamageExaminable
+

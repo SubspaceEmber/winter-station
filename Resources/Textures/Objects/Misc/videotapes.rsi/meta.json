@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by github.com/SubspaceEmber",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "tape"
+    },
+    {
+      "name": "tape_abandoned"
+    },
+    {
+      "name": "tape_blanklabel"
+    },
+    {
+      "name": "tape_blue"
+    },
+    {
+      "name": "tape_clown"
+    },
+    {
+      "name": "tape_cursed"
+    },
+    {
+      "name": "tape_destroyed"
+    },
+    {
+      "name": "tape_filledlabel"
+    },
+    {
+      "name": "tape_green"
+    },
+    {
+      "name": "tape_NT"
+    },
+    {
+      "name": "tape_purple"
+    },
+    {
+      "name": "tape_red"
+    },
+    {
+      "name": "tape_syndicate"
+    },
+    {
+      "name": "tape_trans"
+    },
+    {
+      "name": "tape_color_base"
+    },
+    {
+      "name": "tape_color_label"
+    },
+    {
+      "name": "tape_body_base"
+    },
+    {
+      "name": "tape_label"
+    }
+  ]
+}
